@@ -16,33 +16,44 @@ body {
   align-items: center;
 }
 
-header {
-  width: 90%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
+/* ---------- Header ---------- */
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 var(--container-pad);
+z-index:60;
+backdrop-filter: blur(8px) saturate(120%);
+background: linear-gradient(180deg, rgba(3,6,10,0.35), rgba(3,6,10,0.10));
+box-shadow: var(--shadow);
+}
+.brand{
+display:flex;
+align-items:left;
+gap:14px;
+}
+.navlinks{
+display:flex;
+gap:18px;
+align-items:center;
+}
+.navlinks a{
+color:var(--muted);
+text-decoration:none;
+font-size:15px;
+padding:8px 10px;
+border-radius:8px;
+transition:var(--transition);
 }
 
-.logo {
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+.navlinks a:hover{ color:var(--accent); background:var(--callout); 
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-nav a:hover, nav a.active {
-  opacity: 1;
-  text-decoration: underline;
-}
 
 .hero {
   flex: 1;
