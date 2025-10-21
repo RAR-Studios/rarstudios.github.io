@@ -7,55 +7,6 @@
 <title>RAR Studios — Gold & Silver</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* ---------- Base ---------- */
-:root{
---bg1:#0f2b3d;   /* deep navy */
---bg2:#0f2b3d;   /* soft blue */
---glass: rgba(255,255,255,0.06);
---glass-strong: rgba(255,255,255,0.10);
---accent: rgba(255,255,255,0.9);
---muted: rgba(255,255,255,0.7);
---callout: rgba(255,255,255,0.04);
---max-width:1100px;
---container-pad:24px;
---radius:14px;
---transition:250ms cubic-bezier(.2,.9,.2,1);
---shadow: 0 10px 30px rgba(3,8,12,0.6);
-font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-html,body{height:100%;}
-body{
-margin:0;
-color:var(--accent);
-background:
-linear-gradient(180deg, rgba(5,12,20,0.6), rgba(4,9,14,0.85)),
-/* subtle silk gradient suggestion - replace with actual silk image for best effect */
-radial-gradient(1200px 600px at 10% 10%, rgba(20,40,60,0.12), transparent 10%),
-linear-gradient(90deg, rgba(8,16,24,0.25), rgba(6,12,20,0.1));
-background-color:var(--bg1);
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-scroll-behavior:smooth;
-}
-
-/* silk texture overlay (light) - swap with actual image in .hero if you want */
-.silk {
-position: absolute;
-inset:0;
-background-image: url(''); /* optional: add your silk photo here */
-background-size: cover;
-background-position: center;
-opacity: 0.12;
-mix-blend-mode: overlay;
-pointer-events:none;
-}
-
-.wrap{
-max-width:var(--max-width);
-margin:0 auto;
-padding: var(--container-pad);
-}
 
 /* ---------- Header ---------- */
 header{
@@ -417,8 +368,6 @@ is handled personally in my Barcelona workshop.
             </div>
         </section>
     </main>
-
-</main>
 
 <!-- Footer -->
 <footer>
