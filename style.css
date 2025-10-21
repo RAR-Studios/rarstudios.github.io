@@ -92,13 +92,6 @@ nav a:hover {
   background-color: #0d0d0d;
 }
 
-.gallery img {
-  width: 360px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
 .gallery img:hover {
   transform: scale(1.02);
 }
@@ -212,10 +205,10 @@ footer a:hover {
 }
 
 .product-img {
-  width: 60%;
+  width: 100%;
   max-width:320px
   object-fit: contain;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
   transition: transform 0.3s ease;
 }
