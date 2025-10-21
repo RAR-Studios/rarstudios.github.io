@@ -1,200 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>RAR Studios — Gold & Silver</title>
-<link rel="stylesheet" href="style.css">
-<style>
-/* ---------- Base ---------- */
-:root{
---bg1:#0f2b3d;   /* deep navy */
---bg2:#0f2b3d;   /* soft blue */
---glass: rgba(255,255,255,0.06);
---glass-strong: rgba(255,255,255,0.10);
---accent: rgba(255,255,255,0.9);
---muted: rgba(255,255,255,0.7);
---callout: rgba(255,255,255,0.04);
---max-width:1100px;
---container-pad:24px;
---radius:14px;
---transition:250ms cubic-bezier(.2,.9,.2,1);
---shadow: 0 10px 30px rgba(3,8,12,0.6);
-font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewelry Collection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Optional subtle silk overlay -->
+  <div class="silk"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Atelier A.</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Handcrafted Elegance</h1>
+      <p>Unique silver and gold pieces, designed to tell your story.</p>
+    </section>
+
+    <section class="products">
+      <h2>Featured Pieces</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="bracelet.jpg" alt="Silver Tennis Bracelet">
+          <h3>Silver Tennis Bracelet</h3>
+          <p>Made from 925 sterling silver, a timeless statement of refinement.</p>
+        </div>
+        <div class="product-card">
+          <img src="ring.jpg" alt="Sarahkka Ring">
+          <h3>Sarahkka Ring</h3>
+          <p>Inspired by the Sami goddess of birth and creation — strength and grace in silver.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
 }
 
-html,body{height:100%;}
-body{
-margin:0;
-color:var(--accent);
-background:
-linear-gradient(180deg, rgba(5,12,20,0.6), rgba(4,9,14,0.85)),
-/* subtle silk gradient suggestion - replace with actual silk image for best effect */
-radial-gradient(1200px 600px at 10% 10%, rgba(20,40,60,0.12), transparent 10%),
-linear-gradient(90deg, rgba(8,16,24,0.25), rgba(6,12,20,0.1));
-background-color:var(--bg1);
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-scroll-behavior:smooth;
-}
-
-/* silk texture overlay (light) - swap with actual image in .hero if you want */
-.silk {
-position: absolute;
-inset:0;
-background-image: url(''); /* optional: add your silk photo here */
-background-size: cover;
-background-position: center;
-opacity: 0.12;
-mix-blend-mode: overlay;
-pointer-events:none;
-}
-
-.wrap{
-max-width:var(--max-width);
-margin:0 auto;
-padding: var(--container-pad);
-}
-
-/* ---------- Header ---------- */
-header{
-position:fixed;
-top:0;
-left:0;
-right:0;
-height:64px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 var(--container-pad);
-z-index:60;
-backdrop-filter: blur(8px) saturate(120%);
-background: linear-gradient(180deg, rgba(3,6,10,0.35), rgba(3,6,10,0.10));
-box-shadow: var(--shadow);
-}
-.brand{
-display:flex;
-align-items:center;
-gap:14px;
-}
-.logo{
-width:56px;
-height:56px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-background: #000;
-color:#fff;
-font-weight:700;
-letter-spacing:1px;
-font-size:13px;
-box-shadow: 0 6px 18px rgba(2,4,6,0.6);
-}
-.navlinks{
-display:flex;
-gap:18px;
-align-items:center;
-}
-.navlinks a{
-color:var(--muted);
-text-decoration:none;
-font-size:15px;
-padding:8px 10px;
-border-radius:8px;
-transition:var(--transition);
-}
-.navlinks a:hover{ color:var(--accent); background:var(--callout); }
-
-
-/* hamburger */
-.hamburger{
-display:none;
-width:42px;
-height:42px;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-background: transparent;
-border:1px solid rgba(255,255,255,0.04);
-cursor:pointer;
-}
-.hamburger span{
-display:block;
-width:18px;
-height:2px;
-background:var(--accent);
-border-radius:2px;
-position:relative;
-transition:var(--transition);
-}
-.hamburger span::before, .hamburger span::after{
-content:"";
-position:absolute;
-left:0;
-width:100%;
-height:2px;
-background:var(--accent);
-border-radius:2px;
-transition:var(--transition);
-}
-.hamburger span::before{ transform: translateY(-6px); }
-.hamburger span::after{ transform: translateY(6px); }
-
-/* mobile menu overlay */
-.mobile-menu{
-position:fixed;
-top:72px;
-right:16px;
-background: linear-gradient(180deg, rgba(10,18,26,0.95), rgba(6,12,18,0.95));
-border-radius:12px;
-padding:18px;
-min-width:180px;
-box-shadow: 0 10px 40px rgba(2,6,10,0.6);
-display:none;
-z-index:90;
-}
-.mobile-menu a{
-display:block;
-color:var(--accent);
-text-decoration:none;
-padding:10px 8px;
-border-radius:8px;
-margin:6px 0;
-}
-.mobile-menu a:hover{ background:var(--callout); color:var(--accent); }
 
 <!-- HERO -->
 <section id="home" class="hero" role="region" aria-label="Home">
   <div class="wrap hero-inner">
-    <div class="content" style="text-align:center; margin-top:18v;">
+    <div class="content" style="text-align:center; margin-top:18vh;">
+      
       <header class="site-header">
-        <img src="icons/logoblacknobackground.psd" alt="RAR Studios Logo" class="site-logo">
+        <img src="icons/logoblacknobackground.png" alt="RAR Studios Logo" class="site-logo">
       </header>
 
-      <p class="lead">Handmade quality jewellery made with SILVER &amp; GOLD</p>
+      <p class="lead">Handmade quality jewellery made with <strong>Silver</strong> &amp; <strong>Gold</strong>.</p>
       <a class="btn" href="#jewellery">View Work</a>
 
-      <!-- SERVICES -->
-      <div class="services" aria-hidden="false">
+      <div class="services">
         <a href="#premade" class="service-card">
           <h3>Pre-Made Jewellery</h3>
-          <p>Handmade quality jewellery in silver and gold, ready for shipment.</p>
+          <p>Ready-to-ship handcrafted pieces in silver and gold.</p>
         </a>
 
         <a href="#custom" class="service-card">
           <h3>Made-to-Order</h3>
-          <p>Commission unique pieces tailored to your vision.</p>
+          <p>Commission unique designs tailored to your vision.</p>
         </a>
 
         <a href="#repair" class="service-card">
           <h3>Repair &amp; Polish</h3>
-          <p>Efficient &amp; quality polishing and repairs.</p>
+          <p>Professional polishing and repairs for your treasured pieces.</p>
         </a>
       </div>
     </div>
   </div>
+</div>
 </section>
+
 
 /* ---------- products ---------- */
 .section{
