@@ -1,77 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="RAR Studios — handcrafted gold & silver jewelry with timeless design.">
-  <meta name="author" content="RAR Studios">
-  <title>RAR Studios — Gold & Silver</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rune Alexander — Goldsmith</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- ===== HEADER ===== -->
   <header>
-    <div class="logo">RAR <span>Studios</span></div>
+    <h1 class="logo">RAR Studios</h1>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#collection">Collection</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <a href="index.html" class="active">Home</a>
+      <a href="samples.html">Samples</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- ===== HERO / BANNER (hidden for now) ===== -->
-  <!-- 
-  To activate: remove the 'hidden' class and replace the background image in CSS under '.hero'.
-  -->
-  <section class="hero hidden">
-    <div class="hero-content">
-      <h1>Handcrafted Elegance</h1>
-      <p>Gold & silver pieces made with timeless artistry.</p>
-      <a href="#collection" class="btn">View Collection</a>
+  <section class="hero">
+    <div class="content">
+      <h2>Crafting stories through metal and fire</h2>
+      <p>
+        I'm <strong>Rune Alexander Reisaenen</strong>, a Barcelona-based goldsmith focused on 
+        custom jewellery and original design.
+      </p>
+      <a href="samples.html" class="btn">View Work</a>
     </div>
   </section>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>RAR Studios is dedicated to creating unique handcrafted jewelry — merging fine traditional craftsmanship with a modern minimalist aesthetic. Each piece is made with care, designed to last generations.</p>
-    </section>
-
-    <section id="collection" class="section">
-      <h2>Collection</h2>
-      <div class="gallery">
-        <div class="item"><img src="images/piece1.jpg" alt="Gold Ring"></div>
-        <div class="item"><img src="images/piece2.jpg" alt="Silver Bracelet"></div>
-        <div class="item"><img src="images/piece3.jpg" alt="Earrings"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>For commissions or inquiries:</p>
-      <a href="mailto:info@rarstudios.com" class="email-link">info@rarstudios.com</a>
-    </section>
-  </main>
-
-  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; <span id="year"></span> RAR Studios. All rights reserved.</p>
+    <p>© 2025 RAR Studios — Crafted with precision in Barcelona</p>
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    const toggle = document.getElementById('menu-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => links.classList.toggle('active'));
-
-    // Auto update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
