@@ -225,8 +225,8 @@ section {
 
 .about-image {
   flex: 1;
-  min-width: 280px;
-  height: 300px;
+  min-width: 320;
+  height: 100%;
   background: rgba(255,255,255,0.08);
   border-radius: 10px;
 }
