@@ -1,34 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rune Alexander — Goldsmith</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAR Studios — Handmade Gold & Silver</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- Navigation -->
   <header>
-    <h1 class="logo">RAR Studios</h1>
+    <div class="logo">LOGO</div>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="samples.html">Samples</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Service ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#pre-made">Shop</a></li>
+            <li><a href="#made-to-order">Custom Made</a></li>
+            <li><a href="#repair">Repair</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="content">
-      <h2>Crafting stories through metal and fire</h2>
-      <p>
-        I'm <strong>Rune Alexander Reisaenen</strong>, a Barcelona-based goldsmith focused on 
-        custom jewellery and original design.
-      </p>
-      <a href="samples.html" class="btn">View Work</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>remember to fill in</h1>
+      <p>remember to fill in</p>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 RAR Studios — Crafted with precision in Barcelona</p>
-  </footer>
+  <!-- Frosty Center Section -->
+  <main class="frosty-container">
+    <div class="service-boxes">
+      <div class="service-box" onclick="scrollToSection('pre-made')">
+        <h2>Pre-Made</h2>
+        <p>remember to fill in</p>
+      </div>
+      <div class="service-box" onclick="scrollToSection('made-to-order')">
+        <h2>Made-to-Order</h2>
+        <p>remember to fill in</p>
+      </div>
+      <div class="service-box" onclick="scrollToSection('repair')">
+        <h2>Repair</h2>
+        <p>remember to fill in</p>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="pre-made">
+      <h2>Pre-Made</h2>
+      <div class="gallery">
+        <div class="gallery-item">remember to fill in</div>
+        <div class="gallery-item">remember to fill in</div>
+      </div>
+    </section>
+
+    <section id="made-to-order">
+      <h2>Made-to-Order</h2>
+      <div class="gallery">
+        <div class="gallery-item">remember to fill in</div>
+        <div class="gallery-item">remember to fill in</div>
+      </div>
+    </section>
+
+    <section id="repair">
+      <h2>Repair</h2>
+      <div class="gallery">
+        <div class="gallery-item">remember to fill in</div>
+        <div class="gallery-item">remember to fill in</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-image">remember to fill in</div>
+      <div class="about-text">
+        <h2>About</h2>
+        <p>remember to fill in</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>remember to fill in</p>
+      <div class="socials">
+        <img src="icons/fb.png" alt="Facebook">
+        <img src="icons/ig.png" alt="Instagram">
+        <img src="icons/whatsapp.png" alt="WhatsApp">
+        <img src="icons/email.png" alt="Email">
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
