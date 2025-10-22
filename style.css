@@ -92,15 +92,6 @@ nav a:hover {
   flex-wrap: wrap; /* makes it stack on smaller screens */
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
 .about-text {
   max-width: 500px;
 }
@@ -127,46 +118,39 @@ nav a:hover {
   .about-image img {
     max-width: 100%;
   }
-}
 
-/* ---------- Gallery ---------- */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.gallery img {
-  width: 100%;
-  max-width: 320px;
+/* --- General image settings --- */
+img {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  display: block;
+  border-radius: 8px;
   object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(213, 166, 121, 0.4);
+/* --- About section image --- */
+.about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
 }
 
-/* ---------- Responsive Gallery ---------- */
-@media (max-width: 768px) {
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery img {
-    max-width: 90%;
-  }
+/* --- Gallery or icons (like Repair section) --- */
+#repair img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 10px;
+  transition: transform 0.2s ease;
 }
+
+#repair img:hover {
+  transform: scale(1.1);
+}
+
 
 
 /* ------------------ Frosty Container ------------------ */
