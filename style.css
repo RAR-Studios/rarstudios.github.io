@@ -129,6 +129,45 @@ nav a:hover {
   }
 }
 
+/* ---------- Gallery ---------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(213, 166, 121, 0.4);
+}
+
+/* ---------- Responsive Gallery ---------- */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    max-width: 90%;
+  }
+}
+
 
 /* ------------------ Frosty Container ------------------ */
 .frosty-container {
