@@ -27,6 +27,13 @@ header {
   z-index: 1000;
 }
 
+.logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+
 header .logo {
   font-weight: bold;
   letter-spacing: 1px;
