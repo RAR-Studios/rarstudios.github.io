@@ -148,14 +148,28 @@ nav a:hover {
 }
 
 .about-image img {
-  width: 320px;
+  width: 100%;
+  max-width: 400px; /* or whatever fits your design */
   height: auto;
-  border-radius: 12px;
-  object-fit: scale-down;
+  border-radius: 8px; /* optional */
+  display: block;
+  margin: 0 auto;
 }
 
 .about-text {
   flex: 2;
+}
+
+footer .social-icons img {
+  width: 32px;   /* try 48px or 64px if you want larger */
+  height: auto;
+  margin: 0 10px;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); /* optional subtle glow */
+  transition: transform 0.2s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.1);
 }
 
 /* Contact section */
@@ -169,7 +183,6 @@ nav a:hover {
 .contact img {
   width: 100%;
   height: 35px;
-  object-fit: cover;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
