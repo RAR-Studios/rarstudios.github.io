@@ -174,12 +174,8 @@ nav a:hover {
   line-height: 1.6;
 }
 
-.about-text {
-  flex: 2;
-}
-
 footer .social-icons img {
-  width: 32px;   /* try 48px or 64px if you want larger */
+  width: 48px;   /* try 48px or 64px if you want larger */
   height: auto;
   margin: 0 10px;
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); /* optional subtle glow */
