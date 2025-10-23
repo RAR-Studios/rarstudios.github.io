@@ -1,4 +1,3 @@
-/* ------------------ General ------------------ */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -7,12 +6,7 @@ body {
   color: #f5f2ee;
 }
 
-h1, h2 {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.5px;
-}
-
-/* ------------------ Header ------------------ */
+/* Sticky header */
 header {
   position: fixed;
   top: 0;
@@ -27,9 +21,8 @@ header {
   z-index: 1000;
 }
 
-header .logo {
-  font-weight: bold;
-  letter-spacing: 1px;
+.logo img {
+  height: 40px;
 }
 
 nav ul {
@@ -69,12 +62,13 @@ nav a:hover {
   display: block;
 }
 
-/* ------------------ Hero ------------------ */
+/* Hero */
 .hero {
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
   background: rgba(40, 30, 25, 0.3);
   backdrop-filter: blur(6px);
@@ -82,7 +76,12 @@ nav a:hover {
   margin-top: 80px;
 }
 
-/* ------------------ Frosty Container ------------------ */
+.hero-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Frosty container */
 .frosty-container {
   max-width: 1000px;
   margin: auto;
@@ -94,7 +93,7 @@ nav a:hover {
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-/* ------------------ Service Boxes ------------------ */
+/* Service boxes */
 .service-boxes {
   display: flex;
   gap: 20px;
@@ -119,74 +118,22 @@ nav a:hover {
   box-shadow: 0 0 15px rgba(213, 166, 121, 0.4);
 }
 
-/* ------------------ Sections ------------------ */
-section {
-  margin-bottom: 80px;
-}
-
+/* Gallery 1:1 images */
 .gallery {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-.gallery-item {
-  flex: 1;
-  min-width: 250px;
-  height: 180px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-}
-
-/* --- General image settings --- */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* --- About section image --- */
-.about img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 20px auto;
-  display: block;
-}
-
-/* --- Gallery or icons (like Repair section) --- */
-#repair img {
-  width: 60px;
-  height: 60px;
-  object-fit: scale-down;
-  margin: 10px;
-  transition: transform 0.2s ease;
-}
-
-#repair img:hover {
-  transform: scale(1.1);
-}
-
-/* --- Gallery images (product photos) --- */
 .gallery img {
-  width: 180px;
-  height: 180px;
+  flex: 1 1 calc(50% - 20px);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255,255,255,0.08);
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-/* ------------------ About ------------------ */
+/* About section */
 .about {
   display: flex;
   gap: 40px;
@@ -205,16 +152,17 @@ img {
   flex: 2;
 }
 
-/* ------------------ Contact ------------------ */
+/* Contact section */
 .contact .socials {
   margin-top: 20px;
   display: flex;
   gap: 15px;
+  justify-content: center;
 }
 
 .contact img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -223,16 +171,16 @@ img {
   transform: scale(1.1);
 }
 
-/* ------------------ Responsive ------------------ */
+/* Responsive */
 @media (max-width: 768px) {
   .service-boxes {
     flex-direction: column;
   }
-
   header {
     flex-direction: column;
     height: auto;
   }
+  .gallery img {
+    flex: 1 1 100%;
+  }
 }
-
-
