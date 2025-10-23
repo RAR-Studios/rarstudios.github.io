@@ -148,7 +148,7 @@ nav a:hover {
 }
 
 .about-image img {
-  width: 10%;
+  width: 320px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
