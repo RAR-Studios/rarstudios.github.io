@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAR Studios — Gold & Silver</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Header / Nav -->
+ <!-- Navigation -->
   <header>
-    <nav class="nav-container">
+     <nav class="nav-container">
       <img src="icons/logoblacknobackground.png" alt="RAR Studios Logo" class="logo-small">
       <ul class="nav-links">
-        <li><a href="#pre-made">Pre-Made</a></li>
-        <li><a href="#made-to-order">Made-to-Order</a></li>
-        <li><a href="#repair">Repair</a></li>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Service ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#pre-made">Shop</a></li>
+            <li><a href="#made-to-order">Custom Made</a></li>
+            <li><a href="#repair">Repair</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hidden Hero Section -->
-  <section id="hero" class="hidden">
+  <section id=“home” class=“hero”>
     <div class="hero-content">
       <img src="icons/logoblacknobackground.png" alt="RAR Studios" class="logo-large">
       <h1>RAR Studios</h1>
@@ -30,7 +28,24 @@
     </div>
   </section>
 
-  <!-- Sections -->
+  <!-- Frosty Center Section -->
+  <main class="frosty-container">
+    <div class="service-boxes">
+      <div class="service-box" onclick="scrollToSection('pre-made')">
+        <h2>Pre-Made</h2>
+        <p>remember to fill in</p>
+      </div>
+      <div class="service-box" onclick="scrollToSection('made-to-order')">
+        <h2>Made-to-Order</h2>
+        <p>remember to fill in</p>
+      </div>
+      <div class="service-box" onclick="scrollToSection('repair')">
+        <h2>Repair</h2>
+        <p>remember to fill in</p>
+      </div>
+    </div>
+
+ <!-- Sections -->
   <section id="pre-made">
     <h2>Pre-Made</h2>
     <div class="gallery">
@@ -55,6 +70,24 @@
     </div>
   </section>
 
+<!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-image">remember to fill in</div>
+      <div class="about-text">
+        <h2>About</h2>
+        <p>remember to fill in</p>
+      </div>
+    </section>
+
+  <!-- ---------- About ---------- -->
+  <section id="about" class="about">
+    <img src="images/selfie 1.jpg" alt="About RAR Studios">
+    <div class="about-text">
+      <h2>About</h2>
+      <p>remember to fill in</p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <footer id="contact">
     <h3>Contact</h3>
@@ -70,3 +103,7 @@
 
 </body>
 </html>
+
+
+
+
