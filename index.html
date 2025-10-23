@@ -3,106 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAR Studios — Handmade Gold & Silver</title>
+  <title>RAR Studios — Gold & Silver</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Header / Nav -->
   <header>
-    <img src="icons/logowhitenobackground.png" class="logo" alt="RAR Studios logo">
-  </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Service ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#pre-made">Shop</a></li>
-            <li><a href="#made-to-order">Custom Made</a></li>
-            <li><a href="#repair">Repair</a></li>
-          </ul>
-        </li>
-        <li><a href="#about">About</a></li>
+    <nav class="nav-container">
+      <img src="icons/logoblacknobackground.png" alt="RAR Studios Logo" class="logo-small">
+      <ul class="nav-links">
+        <li><a href="#pre-made">Pre-Made</a></li>
+        <li><a href="#made-to-order">Made-to-Order</a></li>
+        <li><a href="#repair">Repair</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <!-- Hidden Hero Section -->
+  <section id="hero" class="hidden">
     <div class="hero-content">
-       <img src="icons/logowhitenobackground.png" class="logo" alt="RAR Studios logo">
-    </div>
-      <h1>remember to fill in</h1>
-      <p>remember to fill in</p>
+      <img src="icons/logoblacknobackground.png" alt="RAR Studios" class="logo-large">
+      <h1>RAR Studios</h1>
+      <p>Gold & Silver Handcrafted Jewelry</p>
     </div>
   </section>
 
-  <!-- Frosty Center Section -->
-  <main class="frosty-container">
-    <div class="service-boxes">
-      <div class="service-box" onclick="scrollToSection('pre-made')">
-        <h2>Pre-Made</h2>
-        <p>remember to fill in</p>
-      </div>
-      <div class="service-box" onclick="scrollToSection('made-to-order')">
-        <h2>Made-to-Order</h2>
-        <p>remember to fill in</p>
-      </div>
-      <div class="service-box" onclick="scrollToSection('repair')">
-        <h2>Repair</h2>
-        <p>remember to fill in</p>
-      </div>
+  <!-- Sections -->
+  <section id="pre-made">
+    <h2>Pre-Made</h2>
+    <div class="gallery">
+      <img src="images/DSC03834.jpg" alt="Pre-made 1">
+      <img src="images/DSC03853.jpg" alt="Pre-made 2">
     </div>
+  </section>
 
-    <!-- Sections -->
-    <section id="pre-made">
-      <h2>Pre-Made</h2>
-      <div class="gallery">
-         <img src="images/DSC03834.jpg" alt="Facebook">
-        <img src="images/DSC03853.jpg" alt="Instagram">
-      </div>
-    </section>
+  <section id="made-to-order">
+    <h2>Made-to-Order</h2>
+    <div class="gallery">
+      <img src="images/DSC04169.jpg" alt="Made-to-order 1">
+      <img src="images/DSC04190.jpg" alt="Made-to-order 2">
+    </div>
+  </section>
 
-    <section id="made-to-order">
-      <h2>Made-to-Order</h2>
-      <div class="gallery">
-         <img src="images/DSC04169.jpg.png" alt="Facebook">
-        <img src="images/DSC04190.jpg.png" alt="Instagram">
-      </div>
-    </section>
+  <section id="repair">
+    <h2>Repair</h2>
+    <div class="gallery">
+      <img src="images/DSC03834.jpg" alt="Repair 1">
+      <img src="images/DSC03853.jpg" alt="Repair 2">
+    </div>
+  </section>
 
-    <section id="repair">
-      <h2>Repair</h2>
-      <div class="gallery">
-        <img src="icons/fb.png" alt="Facebook">
-        <img src="icons/ig.png" alt="Instagram">
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <img src="images/selfie 1.jpg">remember to fill in</div>
-      <div class="about-text">
-        <h2>About</h2>
-        <p>remember to fill in</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>remember to fill in</p>
-      <div class="socials">
-        <img src="icons/FB.png" alt="Facebook">
-        <img src="icons/IG.png" alt="Instagram">
-        <img src="icons/WA.png" alt="WhatsApp">
-        <img src="icons/mail.png" alt="Email">
-      </div>
-    </section>
-  </main>
+  <!-- Contact Section -->
+  <footer id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:info@rarstudios.com">info@rarstudios.com</a></p>
+    <p>Phone: <a href="tel:+34624012186">+34 624 012 186</a></p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/rar.studiosig/" target="_blank"><img src="icons/IG.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=61578029379720" target="_blank"><img src="icons/FB.png" alt="Facebook"></a>
+      <a href="https://wa.me/34624012186" target="_blank"><img src="icons/WA.png" alt="WhatsApp"></a>
+      <a href="mailto:info@rarstudios.com"><img src="icons/mail.png" alt="Email"></a>
+    </div>
+  </footer>
 
 </body>
 </html>
