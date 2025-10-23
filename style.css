@@ -151,7 +151,7 @@ nav a:hover {
   width: 320px;
   height: auto;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .about-text {
@@ -169,6 +169,7 @@ nav a:hover {
 .contact img {
   width: 100%;
   height: 35px;
+  object-fit: cover;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
