@@ -148,7 +148,7 @@ nav a:hover {
 }
 
 .about-image img {
-  width: 100%;
+  width: 10%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -175,7 +175,7 @@ nav a:hover {
 }
 
 .contact img {
-  width: 35px;
+  width: 120px;
   height: 35px;
   cursor: pointer;
   transition: transform 0.2s ease;
