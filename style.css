@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-  height: 40px;
+  height: 80px;
 }
 
 nav ul {
@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 .hero-logo {
-  width: 120px;
+  width: 320px;
   margin-bottom: 20px;
 }
 
