@@ -330,8 +330,8 @@ footer .social-icons img:hover {
 }
 
 .contact-icons img {
-  width: 120px; /* consistent smaller size */
-  height: 120px;
+  width: 720px; /* consistent smaller size */
+  height: 720px;
   object-fit: contain;
 }
 
