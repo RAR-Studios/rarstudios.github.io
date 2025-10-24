@@ -273,7 +273,7 @@ footer .social-icons img:hover {
 
 .contact-icons a {
   background: rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
+  border-radius: 25%;
   padding: 15px;
   transition: all 0.3s ease;
   display: flex;
@@ -287,8 +287,8 @@ footer .social-icons img:hover {
 }
 
 .contact-icons img {
-  width: 35px; /* consistent smaller size */
-  height: 35px;
+  width: 120px; /* consistent smaller size */
+  height: 120px;
   object-fit: contain;
 }
 
