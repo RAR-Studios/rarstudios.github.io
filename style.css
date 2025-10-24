@@ -197,25 +197,49 @@ nav a:hover {
   box-shadow: 0 0 15px rgba(213, 166, 121, 0.4);
 }
 
+/* ---------- Gallery Section ---------- */
 .gallery {
+  text-align: center;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.gallery h2 {
+  color: #f5f2ee;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* adjusts for screen size */
   gap: 15px;
   justify-items: center;
-  padding: 20px;
 }
 
-.gallery img {
-  width: 80%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 12px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+/* Each image */
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps them square */
+  object-fit: cover; /* crops to fit square nicely */
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.20);
-  filter: brightness(1.1);
+/* Optional hover effect */
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 }
 
 
