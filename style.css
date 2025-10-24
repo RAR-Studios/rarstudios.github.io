@@ -133,7 +133,9 @@ nav a:hover {
   background: rgba(40, 30, 25, 0.3);
   backdrop-filter: blur(6px);
   color: #f5f2ee;
-  margin-top: 60px;
+  margin-top: 60px;  /* or 40px */
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   z-index: 1;
 }
@@ -151,6 +153,7 @@ nav a:hover {
   font-weight: 500;
   margin-bottom: 5px;
   letter-spacing: 0.5px;
+  align-text: center;
 }
 
 .hero-text p {
@@ -158,6 +161,7 @@ nav a:hover {
   color: #e0ddd9;
   max-width: 600px;
   line-height: 1.5;
+  align-text: center;
 }
 
 /* Frosty container */
@@ -315,24 +319,37 @@ footer .social-icons img:hover {
 }
 
 .contact-icons a {
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 10%;
-  padding: 15px;
-  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 8px;
+  transition: all 0.25s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 56px;
+  height: 56px;
 }
 
 .contact-icons a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
 }
+
 
 .contact-icons img {
   width: 60px; /* consistent smaller size */
   height: 60px;
   object-fit: contain;
+}
+
+.contact-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
 }
 
 /* Responsive */
