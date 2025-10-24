@@ -163,7 +163,7 @@ nav a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.20);
   filter: brightness(1.1);
 }
 
