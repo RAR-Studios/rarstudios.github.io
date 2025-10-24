@@ -124,7 +124,7 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  height: 60vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,7 +133,7 @@ nav a:hover {
   background: rgba(40, 30, 25, 0.3);
   backdrop-filter: blur(6px);
   color: #f5f2ee;
-  margin-top: 20px;
+  margin-top: 60px;
   position: relative;
   z-index: 1;
 }
@@ -330,7 +330,7 @@ footer .social-icons img:hover {
 }
 
 .contact-icons img {
-  width: 600px; /* consistent smaller size */
+  width: 60px; /* consistent smaller size */
   height: 60px;
   object-fit: contain;
 }
