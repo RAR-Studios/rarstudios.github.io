@@ -133,9 +133,9 @@ nav a:hover {
   background: rgba(40, 30, 25, 0.3);
   backdrop-filter: blur(6px);
   color: #f5f2ee;
-  margin-top: 40px;  /* or 40px */
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 0px;  /* or 40px */
+  padding-top: 5px;
+  padding-bottom: 10px;
   position: relative;
   z-index: 1;
 }
