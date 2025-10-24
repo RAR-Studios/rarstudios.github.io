@@ -126,19 +126,38 @@ nav a:hover {
 .hero {
   height: 80vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
   background: rgba(40, 30, 25, 0.3);
   backdrop-filter: blur(6px);
   color: #f5f2ee;
   margin-top: 80px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-logo {
-  width: 640px;
-  margin-bottom: 20px;
+  width: 320px; /* smaller for better fit */
+  max-width: 80%;
+  margin-bottom: 25px;
+  height: auto;
+}
+
+/* Hero Text */
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #e0ddd9;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 /* Frosty container */
