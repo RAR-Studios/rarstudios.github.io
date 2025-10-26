@@ -337,8 +337,8 @@ footer .social-icons img:hover {
 
 /* Actual icon images */
 .contact-icons img {
-  width: 720px;       /* increase this to match container */
-  height: 720px;
+  width: 1200px;       /* increase this to match container */
+  height: 1200px;
   object-fit: contain;
   display: block;
 }
