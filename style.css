@@ -296,11 +296,11 @@ footer .social-icons img:hover {
 /* Contact Section */
 .contact {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  margin: 60px auto;
+  margin: 80px auto;
   width: 80%;
 }
 
@@ -310,6 +310,7 @@ footer .social-icons img:hover {
   font-size: 1.8rem;
 }
 
+/* Icons layout */
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -318,25 +319,30 @@ footer .social-icons img:hover {
   flex-wrap: wrap;
 }
 
+/* Individual icon links */
 .contact-icons a {
-  width: 72px;
-  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
 }
 
 .contact-icons a:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
+/* Actual icon images */
 .contact-icons img {
-  width: 48px;
-  height: 48px;
+  width: 64px;       /* increase this to match container */
+  height: 64px;
   object-fit: contain;
   display: block;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 8px;
 }
+
 
 /* Responsive */
 /* Responsive — Mobile (2 per row) */
