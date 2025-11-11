@@ -1,14 +1,37 @@
 /* ---------- Base ---------- */
-:root{
-  --bg:#0e0e10;
-  --surface:#151517;
-  --glass:rgba(255,255,255,.05);
-  --text:#e9e7e4;
-  --muted:#b9b7b3;
-  --line:rgba(255,255,255,.08);
-  --radius:14px;
-  --shadow:0 6px 24px rgba(0,0,0,.35);
 }
+/* Default: Ink (charcoal) */
+:root{
+  --bg:#0e0e10; --surface:#151517; --glass:rgba(255,255,255,.05);
+  --text:#e9e7e4; --muted:#b9b7b3; --line:rgba(255,255,255,.08);
+  --radius:14px; --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+
+/* Bone (light, gallery-white) */
+body.theme-bone{
+  --bg:#f5f4f2; --surface:#ffffff; --glass:rgba(0,0,0,.035);
+  --text:#191917; --muted:#5c5b58; --line:rgba(0,0,0,.10);
+  --shadow:0 8px 28px rgba(0,0,0,.08);
+}
+
+/* Graphite (darker, high-contrast) */
+body.theme-graphite{
+  --bg:#0a0a0b; --surface:#121214; --glass:rgba(255,255,255,.04);
+  --text:#f2f1ef; --muted:#b0aeaa; --line:rgba(255,255,255,.12);
+}
+
+/* Warm neutral (subtle bronze hint, no color cast on photos) */
+body.theme-warm{
+  --bg:#121111; --surface:#181716; --glass:rgba(255,245,235,.05);
+  --text:#ede9e4; --muted:#bfb7af; --line:rgba(255,255,255,.10);
+}
+
+/* Near-white showroom (maximum cleanliness) */
+body.theme-showroom{
+  --bg:#ffffff; --surface:#ffffff; --glass:rgba(0,0,0,.03);
+  --text:#1a1a1a; --muted:#6a6a6a; --line:rgba(0,0,0,.08);
+}
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
