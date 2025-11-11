@@ -44,7 +44,7 @@ body{ padding-top:var(--header-h); }
 
 }
 .header-inner{
-  height:12px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  height:35px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .brand-mark{height:40px;width:auto}
 
@@ -88,7 +88,7 @@ body{ padding-top:var(--header-h); }
 }
 
 /* ---------- Hero ---------- */
-.hero{padding:110px 0 60px;border-bottom:1px solid var(--line);background:linear-gradient(to bottom, rgba(255,255,255,.02), transparent)}
+.hero{padding:35px 0 35px;border-bottom:1px solid var(--line);background:linear-gradient(to bottom, rgba(255,255,255,.02), transparent)}
 .hero-inner{display:grid;place-items:center;text-align:center;gap:18px}
 .hero-mark{width:min(260px,48vw);opacity:.9}
 .hero-text h1{margin:0;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;letter-spacing:.2px}
