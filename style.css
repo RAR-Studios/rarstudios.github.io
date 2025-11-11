@@ -2,13 +2,12 @@
 :root{
   --bg:#0e0e10;
   --surface:#151517;
-  --glass:rgba(255,245,235,.05);
+  --glass:rgba(255,255,255,.05);
   --text:#e9e7e4;
   --muted:#b9b7b3;
-  --line:rgba(255,255,255,.10);
+  --line:rgba(255,255,255,.08);
   --radius:14px;
   --shadow:0 6px 24px rgba(0,0,0,.35);
-  img{max-width:100%;display:block}
 }
 
 *{box-sizing:border-box}
@@ -22,6 +21,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
+img{max-width:100%;display:block}
 
 /* ---------- Layout ---------- */
 .container{width:min(1120px,92vw);margin-inline:auto}
@@ -29,24 +29,16 @@ body{
 .section-head h2{font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:600;margin:0 0 18px}
 
 /* ---------- Header ---------- */
-/* Header: fixed, always follows scroll */
 .site-header{
-  position:fixed; /* was: sticky */
-  top:0; left:0; right:0; z-index:1000;
+  position:sticky;top:0;z-index:1000;
   backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(14,14,16,.65);
+  background:rgba(14,14,16,.6);
   border-bottom:1px solid var(--line);
 }
-/* Offset page content by header height */
-:root{ --header-h:72px; }
-.header-inner{ height:var(--header-h); }
-body{ padding-top:var(--header-h); }
-
-}
 .header-inner{
-  height:35px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
-.brand-mark{height:60px;width:auto}
+.brand-mark{height:40px;width:auto}
 
 .nav{display:flex}
 .nav-list{display:flex;gap:28px;align-items:center;list-style:none;margin:0;padding:0}
@@ -88,7 +80,7 @@ body{ padding-top:var(--header-h); }
 }
 
 /* ---------- Hero ---------- */
-.hero{padding:35px 0 35px;border-bottom:1px solid var(--line);background:linear-gradient(to bottom, rgba(255,255,255,.02), transparent)}
+.hero{padding:110px 0 60px;border-bottom:1px solid var(--line);background:linear-gradient(to bottom, rgba(255,255,255,.02), transparent)}
 .hero-inner{display:grid;place-items:center;text-align:center;gap:18px}
 .hero-mark{width:min(260px,48vw);opacity:.9}
 .hero-text h1{margin:0;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;letter-spacing:.2px}
