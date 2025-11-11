@@ -2,12 +2,13 @@
 :root{
   --bg:#0e0e10;
   --surface:#151517;
-  --glass:rgba(255,255,255,.05);
+  --glass:rgba(255,245,235,.05);
   --text:#e9e7e4;
   --muted:#b9b7b3;
-  --line:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.10);
   --radius:14px;
   --shadow:0 6px 24px rgba(0,0,0,.35);
+  img{max-width:100%;display:block}
 }
 
 *{box-sizing:border-box}
@@ -21,7 +22,6 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
-img{max-width:100%;display:block}
 
 /* ---------- Layout ---------- */
 .container{width:min(1120px,92vw);margin-inline:auto}
