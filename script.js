@@ -1,35 +1,28 @@
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('#site-nav');
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-}
+const header = document.querySelector('header');
+const headerOffset = () => (header ? header.offsetHeight + 24 : 0);
 
-// Accessible dropdown on click/focus (works on mobile)
-const dropdownParent = document.querySelector('.has-dropdown');
-if (dropdownParent) {
-  const btn = dropdownParent.querySelector('.nav-link-btn');
-  const menu = dropdownParent.querySelector('.dropdown');
-  if (btn && menu) {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      dropdownParent.toggleAttribute('aria-expanded');
-    });
-    document.addEventListener('click', (e) => {
-      if (!dropdownParent.contains(e.target)) {
-        btn.setAttribute('aria-expanded','false');
-        dropdownParent.removeAttribute('aria-expanded');
-      }
-    });
-  }
-}
+window.scrollToSection = (id) => {
+  const target = document.getElementById(id);
+  if (!target) return;
 
-// Smooth scroll helper for cards
-window.scrollToId = (id) => {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+  window.scrollTo({ top, behavior: 'smooth' });
 };
+
+// Smooth scrolling for anchor links within the page
+const internalLinks = document.querySelectorAll('a[href^="#"][href!="#"]');
+internalLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const id = href.replace('#', '');
+    if (!id) return;
+
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    event.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
