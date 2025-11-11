@@ -29,14 +29,22 @@ img{max-width:100%;display:block}
 .section-head h2{font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:600;margin:0 0 18px}
 
 /* ---------- Header ---------- */
+/* Header: fixed, always follows scroll */
 .site-header{
-  position:sticky;top:0;z-index:1000;
+  position:fixed; /* was: sticky */
+  top:0; left:0; right:0; z-index:1000;
   backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(14,14,16,.6);
+  background:rgba(14,14,16,.65);
   border-bottom:1px solid var(--line);
 }
+/* Offset page content by header height */
+:root{ --header-h:72px; }
+.header-inner{ height:var(--header-h); }
+body{ padding-top:var(--header-h); }
+
+}
 .header-inner{
-  height:35px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  height:12px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .brand-mark{height:40px;width:auto}
 
