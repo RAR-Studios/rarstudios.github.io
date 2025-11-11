@@ -36,7 +36,7 @@ img{max-width:100%;display:block}
   border-bottom:1px solid var(--line);
 }
 .header-inner{
-  height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  height:35px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .brand-mark{height:40px;width:auto}
 
