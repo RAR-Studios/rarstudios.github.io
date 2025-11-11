@@ -1,86 +1,9 @@
-:root {
-  --bg: #141210;
-  --surface: #1d1a18;
-  --surface-raised: rgba(255, 255, 255, 0.04);
-  --surface-glass: rgba(20, 18, 16, 0.72);
-  --text: #f5f1ea;
-  --muted: #c1bbb2;
-  --accent: #d9a96a;
-  --accent-strong: #e1b57d;
-  --accent-soft: rgba(217, 169, 106, 0.16);
-  --line: rgba(255, 255, 255, 0.12);
-  --radius-lg: 18px;
-  --radius: 14px;
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
-}
-
-body.theme-bone {
-  --bg: #f5f4f2;
-  --surface: #ffffff;
-  --surface-raised: rgba(0, 0, 0, 0.04);
-  --surface-glass: rgba(250, 248, 245, 0.72);
-  --text: #1f1d1a;
-  --muted: #66635e;
-  --accent: #c7934f;
-  --accent-strong: #d39c58;
-  --accent-soft: rgba(199, 147, 79, 0.18);
-  --line: rgba(0, 0, 0, 0.08);
-  --shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
-}
-
-body.theme-graphite {
-  --bg: #111113;
-  --surface: #171719;
-  --surface-raised: rgba(255, 255, 255, 0.05);
-  --surface-glass: rgba(18, 18, 20, 0.78);
-  --text: #f7f6f3;
-  --muted: #b6b3ad;
-  --accent: #dfb577;
-  --accent-strong: #edc787;
-  --accent-soft: rgba(223, 181, 119, 0.2);
-  --line: rgba(255, 255, 255, 0.14);
-}
-
-body.theme-warm {
-  --bg: #161211;
-  --surface: #201b19;
-  --surface-raised: rgba(255, 240, 224, 0.05);
-  --surface-glass: rgba(32, 27, 25, 0.78);
-  --text: #f6eee5;
-  --muted: #d0c2b4;
-  --accent: #e0b57f;
-  --accent-strong: #f0c892;
-  --accent-soft: rgba(224, 181, 127, 0.2);
-  --line: rgba(255, 255, 255, 0.12);
-}
-
-body.theme-showroom {
-  --bg: #ffffff;
-  --surface: #ffffff;
-  --surface-raised: rgba(0, 0, 0, 0.04);
-  --surface-glass: rgba(255, 255, 255, 0.86);
-  --text: #1f1f1f;
-  --muted: #5e5e5e;
-  --accent: #b98036;
-  --accent-strong: #c98d3e;
-  --accent-soft: rgba(185, 128, 54, 0.18);
-  --line: rgba(0, 0, 0, 0.08);
-  --shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-}
-
 body {
   margin: 0;
-  font-family: var(--font-body);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  font-family: 'Lato', sans-serif;
+  background: url('images/silk-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f5f2ee;
 }
 
 /* Navigation Bar */
@@ -93,11 +16,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--surface-glass);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   padding: 0 5%;
   z-index: 1000;
-  border-bottom: 1px solid var(--line);
 }
 
 nav ul {
@@ -112,15 +34,15 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--text);
+  color: #f5f5f5;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.5px;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s;
 }
 
 nav ul li a:hover {
-  color: var(--accent);
+  opacity: 0.7;
 }
 
 /* For smaller laptops â€” make nav items shrink gracefully */
@@ -138,6 +60,17 @@ nav ul li a:hover {
   height: 110px;
 }
 
+
+nav a {
+  color: #f5f2ee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d5a679;
+}
+
 /* Dropdown Container */
 .dropdown {
   position: relative;
@@ -150,12 +83,12 @@ nav ul li a:hover {
   position: absolute;
   top: 100%; /* sits directly below the button */
   left: 0;
-  background: var(--surface-glass);
-  border: 1px solid var(--line);
+  background: rgba(40, 30, 25, 0.95);
+  backdrop-filter: blur(8px);
   list-style: none;
   padding: 10px 0;
   margin: 0;
-  border-radius: var(--radius);
+  border-radius: 8px;
   min-width: 180px;
   z-index: 999;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -178,69 +111,69 @@ nav ul li a:hover {
 }
 
 .dropdown-menu li a {
-  color: var(--text);
+  color: #f5f5f5;
   text-decoration: none;
   display: block;
   transition: background 0.2s ease;
 }
 
 .dropdown-menu li a:hover {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 
 /* Hero */
 .hero {
-  min-height: 60vh;
+  height: 64vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(180deg, rgba(20, 18, 16, 0.8), rgba(20, 18, 16, 0.5));
-  backdrop-filter: blur(10px);
-  color: var(--text);
-  margin-top: 80px;
-  padding: 140px 5% 100px;
+  background: rgba(40, 30, 25, 0.3);
+  backdrop-filter: blur(6px);
+  color: #f5f2ee;
+  margin-top: 40px;  /* or 40px */
+  padding-top: 5px;
+  padding-bottom: 10px;
   position: relative;
   z-index: 1;
 }
 
 .hero-logo {
-  width: 280px;
-  max-width: 80%;
-  margin-bottom: 24px;
+  width: 320px; /* smaller for better fit */
+  max-width: 100%;
+  margin-bottom: -60px;
+  height: auto;
 }
 
 /* Hero Text */
 .hero-text h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 12px;
-  letter-spacing: 0.6px;
-  text-align: center;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+  align-text: center;
 }
 
 .hero-text p {
   font-size: 1.1rem;
-  color: var(--muted);
+  color: #e0ddd9;
   max-width: 600px;
   line-height: 1.5;
-  text-align: center;
+  align-text: center;
 }
 
 /* Frosty container */
 .frosty-container {
   max-width: 1000px;
   margin: auto;
-  background: var(--surface-raised);
-  backdrop-filter: blur(12px);
-  border-radius: var(--radius-lg);
-  padding: 60px 8%;
-  margin-top: -60px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px 15px;
+  margin-top: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 /* Service boxes */
@@ -249,35 +182,23 @@ nav ul li a:hover {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .service-box {
   flex: 1;
   min-width: 250px;
-  background: var(--surface);
-  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   text-align: center;
-  padding: 32px 24px;
+  padding: 30px 15px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .service-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  border-color: var(--accent-soft);
-}
-
-.service-box h2 {
-  margin-bottom: 12px;
-  font-size: 1.4rem;
-}
-
-.service-box p {
-  color: var(--muted);
-  margin: 0;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(213, 166, 121, 0.4);
 }
 
 /* ---------- Gallery Section ---------- */
@@ -289,8 +210,8 @@ nav ul li a:hover {
 }
 
 .gallery h2 {
-  color: var(--text);
-  margin-bottom: 32px;
+  color: #f5f2ee;
+  margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -308,15 +229,14 @@ nav ul li a:hover {
   width: 100%;
   aspect-ratio: 1 / 1; /* keeps them square */
   object-fit: cover; /* crops to fit square nicely */
-  border-radius: var(--radius);
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Optional hover effect */
 .gallery-grid img:hover {
-  transform: scale(1.03);
-  opacity: 0.95;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+  transform: scale(1.5);
+  opacity: 0.9;
 }
 
 /* Responsive tweaks */
@@ -331,10 +251,9 @@ nav ul li a:hover {
 /* About Section Layout */
 .about {
   padding: 80px 10%;
-  background: var(--surface-raised); /* subtle frosted feel */
-  backdrop-filter: blur(12px);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05); /* subtle frosted feel */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
 }
 
 .about-container {
@@ -348,97 +267,95 @@ nav ul li a:hover {
 .about-image img {
   width: 300px;
   height: auto;
-  border-radius: var(--radius);
+  border-radius: 10px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--line);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .about-text {
   flex: 1;
   min-width: 280px;
-  color: var(--text);
+  color: #f5f5f5;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
+footer .social-icons img {
+  width: 360px;   /* try 48px or 64px if you want larger */
+  height: auto;
+  margin: 0 10px;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); /* optional subtle glow */
+  transition: transform 0.2s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Section */
 .contact {
-  padding: 80px 0;
   text-align: center;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 80px auto;
+  width: 80%;
 }
 
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 32px;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
 }
 
+/* Icons layout */
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 28px;
+  align-items: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
+/* Individual icon links */
 .contact-icons a {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 20px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
 }
 
 .contact-icons a:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
-  border-color: var(--accent-soft);
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
 }
 
+/* Actual icon images */
 .contact-icons img {
-  width: 38px;
-  height: 38px;
+  width: 120px;       /* increase this to match container */
+  height: 120px;
+  object-fit: contain;
+  display: block;
 }
 
+
+/* Responsive */
+/* Responsive â€” Mobile (2 per row) */
 @media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   header {
-    padding: 0 24px;
-    height: 72px;
+    flex-direction: column;
+    height: auto;
   }
-
-  .logo img {
-    height: 80px;
+  .gallery img {
+    flex: 1 1 100%;
   }
-
-  .hero {
-    padding: 120px 24px 80px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .frosty-container {
-    padding: 48px 24px;
-  }
-
-  .about {
-    padding: 60px 24px;
-  }
-
-  .contact {
-    padding: 60px 24px;
-  }
-
-  .contact-icons {
-    gap: 18px;
-  }
+  
 }
