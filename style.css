@@ -140,49 +140,51 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  height: 40vh;
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* size & spacing */
+  margin-top: 80px;          /* clears fixed header */
+  padding: 80px 20px 60px;   /* space above logo and before boxes */
+  box-sizing: border-box;
+
+  /* background overlay */
+  background: rgba(30, 22, 18, 0.6);
+  backdrop-filter: blur(8px);
+
+  /* text color */
+  color: #fff7ee;
+
+  /* important: NO fixed height so nothing overlaps */
+}
+
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-
-  background: rgba(30, 22, 18, 0.55); /* fog overlay */
-  backdrop-filter: blur(6px);
-
-  margin-top: 90px;
-  padding-top: 15px;
-  padding-bottom: 60px;
-  color: #fff9f2;
+  gap: 10px;              /* controls distance: logo ↔ h1 ↔ p */
 }
 
 .hero-logo {
-  width: 320px; /* smaller for better fit */
+  width: 260px;
   max-width: 100%;
-  margin-bottom: -30px;
-  height: auto;
+  margin-bottom: 4px;     /* logo and h1 sit close together */
 }
 
 /* Hero Text */
 .hero-text h1 {
+  margin: 4px 0 8px;      /* tight under logo, small gap above p */
   font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 35px;
-  margin-top: -15px;
-  letter-spacing: 0.5px;
-  align-text: center;
 }
 
 .hero-text p {
-  font-size: 1.1rem;
-  color: #e0ddd9;
+  margin: 0;
+  font-size: 1.05rem;
   max-width: 600px;
-  line-height: 1.5;
-  align-text: center;
-  margin-top: 0px;
-  margin-bottom: 35px;
-  font-size: 1.1rem;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* Frosty container */
@@ -319,14 +321,16 @@ footer .social-icons img:hover {
 /* Contact Section */
 .contact {
   text-align: center;
-  padding: 40px 0;
-  background: rgba(30, 20, 16, 0.55);
+  padding: 40px 0 50px;
+  background: rgba(26, 18, 15, 0.9);   /* same “fog” as other panels */
   backdrop-filter: blur(10px);
-  border-radius: 16px;
+  border-radius: 24px;
   margin: 80px auto;
-  width: 80%;
+  max-width: 1000px;
+  width: 90%;
   color: #ffefe3;
 }
+
 
 .contact h2 {
   color: #f5f5f5;
@@ -334,35 +338,46 @@ footer .social-icons img:hover {
   font-size: 1.8rem;
 }
 
-/* Icons layout */
 .contact-icons {
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
-/* Individual icon links */
+/* clickable areas */
 .contact-icons a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  transition: all 0.25s ease;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: transparent;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .contact-icons a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
 }
 
-/* Actual icon images */
+/* actual icon images */
 .contact-icons img {
-  width: 120px;       /* increase this to match container */
-  height: 120px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* Actual icon images */
+/* actual icon images */
+.contact-icons img {
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   display: block;
 }
