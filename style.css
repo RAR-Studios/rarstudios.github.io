@@ -199,41 +199,29 @@ nav a:hover {
 }
 
 /* Service boxes */
-.service-box {
-  flex: 1;
-  min-width: 260px;
-  background: rgba(26, 18, 15, 0.55); /* deeper fog block */
-  border-radius: 12px;
-  padding: 30px 15px;
-  text-align: center;
-  color: #fff7ee;
-  transition: all 0.25s ease;
+.service-boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
 }
-
-.service-box:hover {
-  transform: translateY(-4px);
-  background: rgba(26, 18, 15, 0.75); /* stronger fog on hover */
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
 
 .service-box {
   flex: 1;
   min-width: 250px;
-  background: #ffffffbd;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   text-align: center;
   padding: 30px 15px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #222;
 }
 
 .service-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(213, 166, 121, 0.4);
 }
-
 
 /* ---------- Gallery Section ---------- */
 .gallery {
