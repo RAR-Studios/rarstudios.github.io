@@ -147,8 +147,8 @@ nav a:hover {
   text-align: center;
 
   /* size & spacing */
-  margin-top: 40px;          /* clears fixed header */
-  padding: 80px 20px 60px;   /* space above logo and before boxes */
+  margin-top: 60px;          /* clears fixed header */
+  padding: 25px 20px 12px;   /* space above logo and before boxes */
   box-sizing: border-box;
 
   /* background overlay */
