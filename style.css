@@ -144,7 +144,7 @@ nav a:hover {
   color: #f5f2ee;
   margin-top: 100px; /* clears fixed header + tagline */
   padding-top: 5px;
-  padding-bottom: 35px;
+  padding-bottom: 45px;
   position: relative;
   z-index: 1;
 }
