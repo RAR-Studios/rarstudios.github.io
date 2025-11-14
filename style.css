@@ -152,7 +152,7 @@ nav a:hover {
 .hero-logo {
   width: 320px; /* smaller for better fit */
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: -15px;
   height: auto;
 }
 
