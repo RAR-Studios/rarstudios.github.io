@@ -151,8 +151,8 @@ nav a:hover {
   backdrop-filter: blur(6px);
 
   margin-top: 90px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 60px;
   color: #fff9f2;
 }
 
