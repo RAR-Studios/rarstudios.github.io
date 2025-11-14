@@ -139,10 +139,16 @@ nav a:hover {
   color: #2B2B2B;      /* Coal */
 }
 
-  /* important: NO fixed height so nothing overlaps */
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Left side (logo) */
+/* left column: logo */
 .hero-left {
   flex: 1;
   display: flex;
@@ -154,27 +160,25 @@ nav a:hover {
   height: auto;
 }
 
-/* Right side (text) */
+/* right column: text */
 .hero-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
-
-.hero-text h1 {
- font-size: 2rem;
+.hero-right h1 {
+  font-size: 2rem;
   margin: 0 0 12px;
-  color: #2B2B2B;
 }
 
-.hero-text p {
-  font-size: 1.1rem;
+.hero-right p {
+  font-size: 1.05rem;
   margin: 0;
   opacity: 0.85;
 }
-
 
 .frosty-container {
   max-width: 1000px;
