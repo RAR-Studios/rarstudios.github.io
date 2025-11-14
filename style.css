@@ -224,7 +224,7 @@ nav a:hover {
 }
 
 .gallery h2 {
-  color: #f5f2ee;
+  color: #2B2B2B;
   margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 500;
@@ -290,7 +290,7 @@ nav a:hover {
 .about-text {
   flex: 1;
   min-width: 280px;
-  color: #f5f5f5;
+  color: #2B2B2B;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -318,7 +318,7 @@ footer .social-icons img:hover {
 }
 
 .contact h2 {
-  color: #f5f5f5;
+  color: #2B2B2B;
   margin-bottom: 30px;
   font-size: 1.8rem;
 }
