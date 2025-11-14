@@ -148,7 +148,7 @@ nav a:hover {
 
   /* size & spacing */
   margin-top: 40px;          /* clears fixed header */
-  padding: 60px 20px 40px;   /* space above logo and before boxes */
+  padding: 80px 20px 60px;   /* space above logo and before boxes */
   box-sizing: border-box;
 
   /* background overlay */
