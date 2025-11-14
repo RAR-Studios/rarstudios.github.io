@@ -156,7 +156,7 @@ nav a:hover {
 .hero-logo {
   width: 320px; /* smaller for better fit */
   max-width: 100%;
-  margin-bottom: -15px;
+  margin-bottom: -30px;
   height: auto;
 }
 
@@ -165,7 +165,7 @@ nav a:hover {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 35px;
-  margin-top: 0px;
+  margin-top: -15px;
   letter-spacing: 0.5px;
   align-text: center;
 }
@@ -177,6 +177,7 @@ nav a:hover {
   line-height: 1.5;
   align-text: center;
   margin-top: 0px;
+  margin-bottom: 35px;
   font-size: 1.1rem;
   opacity: 0.85;
 }
