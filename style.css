@@ -147,8 +147,8 @@ nav a:hover {
   text-align: center;
 
   /* size & spacing */
-  margin-top: 80px;          /* clears fixed header */
-  padding: 80px 20px 60px;   /* space above logo and before boxes */
+  margin-top: 40px;          /* clears fixed header */
+  padding: 60px 20px 40px;   /* space above logo and before boxes */
   box-sizing: border-box;
 
   /* background overlay */
@@ -169,7 +169,7 @@ nav a:hover {
 }
 
 .hero-logo {
-  width: 260px;
+  width: 340px;
   max-width: 100%;
   margin-bottom: 4px;     /* logo and h1 sit close together */
 }
@@ -185,6 +185,7 @@ nav a:hover {
   font-size: 1.05rem;
   max-width: 600px;
   opacity: 0.9;
+  align-items: center;
 }
 
 /* Frosty container */
