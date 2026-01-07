@@ -9,52 +9,48 @@
   <link rel="icon" type="image/png" href="icons/logoblacknobackground.png">
 </head>
 <body>
-
   <header>
     <div class="brand">
-      <div class="logo">
-        <img src="icons/logoblacknobackground.png" alt="RAR Studios Logo">
-      </div>
-      <div class="logo-tagline">
-        <span>Handmade jewellery</span>
-        <span>Based in Barcelona</span>
-      </div>
+      <div class="logo"><img src="icons/logoblacknobackground.png" alt="RAR Studios Logo"></div>
+      <div class="logo-tagline"><span>Handmade jewellery</span><span>Based in Barcelona</span></div>
     </div>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
 
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#">Collection ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#sami">Sámi Collection</a></li>
-            <li><a href="#custom">Custom</a></li>
-            <li><a href="#repair">Repair</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#shop">Shop</a></li>
-
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="collection.html">Collection ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="collection.html#gallery">Gallery</a></li>
+        <li><a href="collection.html#sami">Sámi Collection</a></li>
       </ul>
-    </nav>
-  </header>
+    </li>
 
-  <!-- HERO: logo left, text right -->
-  <section id="home" class="hero">
+    <li><a href="shop.html">Shop</a></li>
+
+    <li class="dropdown">
+      <a href="services.html">Services ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="services.html#custom">Custom</a></li>
+        <li><a href="services.html#repair">Repair</a></li>
+      </ul>
+    </li>
+
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+</header>
+
+  <section class="hero">
     <div class="hero-row">
       <div class="hero-left">
-        <img src="icons/logoblacknobackground.png" alt="RAR Studios" class="hero-logo">
+        <img src="icons/logowhitenobackground.png" alt="RAR Studios" class="hero-logo">
       </div>
-
       <div class="hero-right">
-        <h1>Welcome to RAR Studios — handmade jewellery made to be used.</h1>
+        <h1>Handmade jewellery made to be used.</h1>
         <p>Jeweller based in Barcelona. Every piece is made by hand with high quality material.</p>
         <div class="hero-cta">
-          <a class="cta" href="#shop">Browse shop</a>
+          <a class="cta" href="shop.html">Browse shop</a>
           <a class="cta cta-ghost" href="https://ig.me/m/rar.studiosig" target="_blank" rel="noopener">Message on Instagram</a>
         </div>
       </div>
@@ -62,188 +58,11 @@
   </section>
 
   <main class="frosty-container">
-
-    <!-- QUICK LINKS -->
     <div class="service-boxes">
-      <div class="service-box" onclick="scrollToSection('gallery')">
-        <h2>Gallery</h2>
-        <p>Selected pieces in silver and gold.</p>
-      </div>
-      <div class="service-box" onclick="scrollToSection('sami')">
-        <h2>Sámi Collection</h2>
-        <p>Nordic and Sámi inspired pieces.</p>
-      </div>
-      <div class="service-box" onclick="scrollToSection('custom')">
-        <h2>Custom</h2>
-        <p>Commission one-of-a-kind work.</p>
-      </div>
+      <a class="service-box as-link" href="collection.html#gallery"><h2>Gallery</h2><p>Selected pieces.</p></a>
+      <a class="service-box as-link" href="collection.html#sami"><h2>Sámi</h2><p>Nordic inspired.</p></a>
+      <a class="service-box as-link" href="services.html#custom"><h2>Custom</h2><p>Commission work.</p></a>
     </div>
-
-    <!-- SHOP -->
-    <section id="shop" class="shop">
-      <div class="section-head">
-        <h2>Shop</h2>
-        <p class="muted">Limited pieces. Tap a product to message on Instagram. The message template is copied automatically.</p>
-      </div>
-
-      <div class="shop-grid">
-        <a class="shop-card" href="#rings" onclick="scrollToSection('rings'); return false;">
-          <h3>Rings</h3><p>Stacks, signets, one-offs.</p>
-        </a>
-        <a class="shop-card" href="#pendants" onclick="scrollToSection('pendants'); return false;">
-          <h3>Pendants</h3><p>Silver, stones, symbols.</p>
-        </a>
-        <a class="shop-card" href="#bracelets" onclick="scrollToSection('bracelets'); return false;">
-          <h3>Bracelets</h3><p>Cuffs and chains.</p>
-        </a>
-        <a class="shop-card" href="#earrings" onclick="scrollToSection('earrings'); return false;">
-          <h3>Earrings &amp; Hoops</h3><p>Studs, hooks, hoops.</p>
-        </a>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- RINGS -->
-      <section id="rings" class="catalog">
-        <h3>Rings</h3>
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="images/perl_white.jpg" alt="Ring">
-            <h4>Hammered band — 925</h4>
-            <p class="price">€95</p>
-            <button class="buy" onclick="messageIG('Hammered band — 925', '€95')">Message on Instagram</button>
-          </article>
-
-          <article class="product-card">
-            <img src="images/samiring.jpg" alt="Sámi ring">
-            <h4>Sámi ring</h4>
-            <p class="price">€120</p>
-            <button class="buy" onclick="messageIG('Sámi ring', '€120')">Message on Instagram</button>
-          </article>
-        </div>
-      </section>
-
-      <!-- PENDANTS -->
-      <section id="pendants" class="catalog">
-        <h3>Pendants</h3>
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="images/opalring.jpg" alt="Pendant">
-            <h4>Stone pendant</h4>
-            <p class="price">€140</p>
-            <button class="buy" onclick="messageIG('Stone pendant', '€140')">Message on Instagram</button>
-          </article>
-        </div>
-      </section>
-
-      <!-- BRACELETS -->
-      <section id="bracelets" class="catalog">
-        <h3>Bracelets</h3>
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="images/vinering.jpg" alt="Bracelet">
-            <h4>Silver bracelet</h4>
-            <p class="price">€160</p>
-            <button class="buy" onclick="messageIG('Silver bracelet', '€160')">Message on Instagram</button>
-          </article>
-        </div>
-      </section>
-
-      <!-- EARRINGS -->
-      <section id="earrings" class="catalog">
-        <h3>Earrings &amp; Hoops</h3>
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="images/goldearring.jpg" alt="Earrings">
-            <h4>Gold earrings</h4>
-            <p class="price">€190</p>
-            <button class="buy" onclick="messageIG('Gold earrings', '€190')">Message on Instagram</button>
-          </article>
-
-          <article class="product-card">
-            <img src="images/samiearring.jpg" alt="Sámi earrings">
-            <h4>Sámi earrings</h4>
-            <p class="price">€130</p>
-            <button class="buy" onclick="messageIG('Sámi earrings', '€130')">Message on Instagram</button>
-          </article>
-        </div>
-      </section>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="images/perl_white.jpg" alt="Gallery piece" class="gallery-item">
-        <img src="images/perl_black.jpg" alt="Gallery piece" class="gallery-item">
-      </div>
-    </section>
-
-    <!-- SÁMI -->
-    <section id="sami" class="gallery">
-      <h2>Sámi Collection</h2>
-      <div class="gallery-grid">
-        <img src="images/samipin.jpg" alt="Sámi piece" class="gallery-item">
-        <img src="images/samiring.jpg" alt="Sámi piece" class="gallery-item">
-        <img src="images/samiearring.jpg" alt="Sámi piece" class="gallery-item">
-      </div>
-    </section>
-
-    <!-- CUSTOM -->
-    <section id="custom" class="gallery">
-      <h2>Custom</h2>
-      <div class="gallery-grid">
-        <img src="images/emeraldring.jpg" alt="Custom example" class="gallery-item">
-        <img src="images/goldearring.jpg" alt="Custom example" class="gallery-item">
-        <img src="images/opalring.jpg" alt="Custom example" class="gallery-item">
-        <img src="images/vinering.jpg" alt="Custom example" class="gallery-item">
-      </div>
-    </section>
-
-    <!-- REPAIR -->
-    <section id="repair" class="gallery">
-      <h2>Repair</h2>
-      <div class="gallery-grid">
-        <img src="images/repairgold.jpg" alt="Repair example" class="gallery-item">
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="images/selfie 1.jpg" alt="About RAR Studios">
-        </div>
-
-        <div class="about-text">
-          <h2>About</h2>
-          <p>I’m a Norwegian goldsmith based in Barcelona with a background in glassblowing and contemporary craft.</p>
-          <p>Services include repairs &amp; polishing, custom commissions and a curated selection of ready pieces. Every piece is handled personally in my Barcelona workshop.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-
-      <div class="contact-icons">
-        <a class="icon-box" href="https://www.facebook.com/profile.php?id=61578029379720" target="_blank" rel="noopener">
-          <img src="icons/FB.png" alt="Facebook">
-        </a>
-        <a class="icon-box" href="https://www.instagram.com/rar.studiosig/" target="_blank" rel="noopener">
-          <img src="icons/IG.png" alt="Instagram">
-        </a>
-        <a class="icon-box" href="https://ig.me/m/rar.studiosig" target="_blank" rel="noopener">
-          <img src="icons/WA.png" alt="Instagram DM">
-        </a>
-        <a class="icon-box" href="mailto:info@rarstudios.com">
-          <img src="icons/mail.png" alt="Email">
-        </a>
-      </div>
-    </section>
-
   </main>
-
 </body>
 </html>
