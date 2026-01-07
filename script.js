@@ -1,46 +1,25 @@
 const header = document.querySelector("header");
 
-const headerOffset = () => (header ? header.offsetHeight + 16 : 0);
+function headerOffset() {
+  return header ? header.offsetHeight + 16 : 0;
+}
 
-window.scrollToSection = (id) => {
+function scrollToSection(id) {
   const el = document.getElementById(id);
   if (!el) return;
-
   const top = el.getBoundingClientRect().top + window.scrollY - headerOffset();
   window.scrollTo({ top, behavior: "smooth" });
-};
+}
 
-// Smooth anchor scrolling
-document.querySelectorAll('a[href^="#"][href!="#"]').forEach((a) => {
+// IMPORTANT: only intercept HASH links (#section). Do NOT block normal pages (shop.html).
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     const href = a.getAttribute("href");
-    const id = href ? href.slice(1) : "";
-    if (!id) return;
-
+    if (!href || href === "#") return; // allow dropdown toggles that use "#"
+    const id = href.slice(1);
     const el = document.getElementById(id);
-    if (!el) return;
-
+    if (!el) return; // if section doesn't exist, do nothing and allow default
     e.preventDefault();
     scrollToSection(id);
   });
 });
-
-// IG “shop-like” flow: copy template + open DM
-window.messageIG = async (productName, price) => {
-  const template =
-`Hi RAR Studios,
-I want to reserve: ${productName}
-Price: ${price}
-
-My size (if ring): ____
-Shipping city/country: ____
-Name: ____`;
-
-  try {
-    await navigator.clipboard.writeText(template);
-  } catch (_) {
-    // ignore (some browsers block clipboard). Still open IG.
-  }
-
-  window.open("https://ig.me/m/rar.studiosig", "_blank", "noopener");
-};
