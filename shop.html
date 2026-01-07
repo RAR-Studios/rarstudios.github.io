@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAR Studios — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="icons/logowhitenobackground.png" alt="RAR Studios Logo"></div>
+      <div class="logo-tagline"><span>Handmade jewellery</span><span>Based in Barcelona</span></div>
+    </div>
+    <!-- NAV -->
+  </header>
+
+  <main class="frosty-container page-top">
+    <div class="section-head">
+      <h2>Shop</h2>
+      <p class="muted">Tap “Message on Instagram” to reserve. The message template is copied automatically.</p>
+    </div>
+
+    <div class="shop-grid">
+      <a class="shop-card" href="#rings"><h3>Rings</h3><p>Stacks, signets, one-offs.</p></a>
+      <a class="shop-card" href="#pendants"><h3>Pendants</h3><p>Silver, stones, symbols.</p></a>
+      <a class="shop-card" href="#bracelets"><h3>Bracelets</h3><p>Cuffs and chains.</p></a>
+      <a class="shop-card" href="#earrings"><h3>Earrings &amp; Hoops</h3><p>Studs, hooks, hoops.</p></a>
+    </div>
+
+    <div class="divider"></div>
+
+    <section id="rings" class="catalog">
+      <h3>Rings</h3>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/perl_white.jpg" alt="Ring">
+          <h4>Hammered band — 925</h4>
+          <p class="price">€95</p>
+          <button class="buy" onclick="messageIG('Hammered band — 925','€95')">Message on Instagram</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="pendants" class="catalog">
+      <h3>Pendants</h3>
+      <div class="product-grid"></div>
+    </section>
+
+    <section id="bracelets" class="catalog">
+      <h3>Bracelets</h3>
+      <div class="product-grid"></div>
+    </section>
+
+    <section id="earrings" class="catalog">
+      <h3>Earrings &amp; Hoops</h3>
+      <div class="product-grid"></div>
+    </section>
+  </main>
+</body>
+</html>
