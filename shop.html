@@ -1,256 +1,215 @@
 
-// ========================================
-// HEADER AND SMOOTH SCROLLING
-// ========================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAR Studios — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="icons/logoblacknobackground.png">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">
+      <img src="icons/logoblacknobackground.png" alt="RAR Studios Logo">
+    </div>
+
+    <div class="logo-tagline"></div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Service ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#made-to-order">Custom Made</a></li>
+            <li><a href="index.html#repair">Repair</a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="frosty-container page-top">
+
+    <!-- Shop introduction -->
+    <div class="section-head">
+      <h2>Shop</h2>
+      <p class="muted">
+        Handmade pieces, individually crafted.
+        Contact us on Instagram to enquire or reserve.
+      </p>
+    </div>
+
+    <!-- Category navigation -->
+    <div class="shop-grid">
+      <a class="shop-card" href="#rings">
+        <h3>Rings</h3>
+        <p>Stacks, signets, one-offs.</p>
+      </a>
+
+      <a class="shop-card" href="#pendants">
+        <h3>Pendants</h3>
+        <p>Silver, stones, symbols.</p>
+      </a>
+
+      <a class="shop-card" href="#bracelets">
+        <h3>Bracelets</h3>
+        <p>Cuffs and chains.</p>
+      </a>
+
+      <a class="shop-card" href="#earrings">
+        <h3>Earrings &amp; Hoops</h3>
+        <p>Studs, hooks, hoops.</p>
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- RINGS -->
+    <section id="rings" class="catalog">
+      <h3>Rings</h3>
+
+      <div class="product-grid">
+
+        <!-- Product 1: Amethyst -->
+        <article class="product-card">
+
+          <button class="product-image-button"
+                  type="button"
+                  aria-label="View Amethyst Ring photographs">
+
+            <img
+              src="images/ring amethyst oval/ametyst/DSC04702.jpg"
+              alt="Amethyst ring in 925 sterling silver"
+              class="product-main-image">
+
+            <span class="photo-count">View 3 photos</span>
+          </button>
+
+          <div class="product-gallery" hidden>
+            <img src="images/ring amethyst oval/ametyst/DSC04704.jpg"
+                 alt="Amethyst ring — alternate view">
 
-const header = document.querySelector("header");
+            <img src="images/ring amethyst oval/ametyst/DSC04711.jpg"
+                 alt="Amethyst ring — detail view">
+          </div>
 
-function headerOffset() {
-  return header ? header.offsetHeight + 16 : 0;
-}
+          <div class="product-info">
+            <h4>Amethyst Ring</h4>
+            <p class="product-material">925 Sterling Silver · 4mm band</p>
+            <p class="price">€95</p>
 
-function scrollToSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
+            <button class="buy instagram-button" type="button">
+              Enquire on Instagram
+            </button>
 
-  const top =
-    el.getBoundingClientRect().top +
-    window.scrollY -
-    headerOffset();
+            <p class="message-status" aria-live="polite"></p>
+          </div>
 
-  window.scrollTo({
-    top,
-    behavior: "smooth"
-  });
-}
+        </article>
 
-// Only intercept links pointing to sections on the current page.
+        <!-- Product 2: Smoky Quartz -->
+        <article class="product-card">
 
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener("click", (e) => {
-    const href = a.getAttribute("href");
+          <button class="product-image-button"
+                  type="button"
+                  aria-label="View Smoky Quartz Ring photographs">
 
-    if (!href || href === "#") return;
+            <img
+              src="images/ring amethyst oval/ring smokey q/ring smokey q1.jpg"
+              alt="Smoky quartz ring in 925 sterling silver"
+              class="product-main-image">
 
-    const id = href.slice(1);
-    const el = document.getElementById(id);
+            <span class="photo-count">View 3 photos</span>
+          </button>
 
-    if (!el) return;
+          <div class="product-gallery" hidden>
+            <img src="images/ring amethyst oval/ring smokey q/ring smokey q3.jpg"
+                 alt="Smoky quartz ring — alternate view">
 
-    e.preventDefault();
-    scrollToSection(id);
-  });
-});
+            <img src="images/ring amethyst oval/ring smokey q/ring smokey q4.jpg"
+                 alt="Smoky quartz ring — detail view">
+          </div>
 
+          <div class="product-info">
+            <h4>Smoky Quartz Ring</h4>
+            <p class="product-material">925 Sterling Silver · 4mm band</p>
+            <p class="price">€95</p>
 
-// ========================================
-// PRODUCT PHOTO LIGHTBOX
-// ========================================
+            <button class="buy instagram-button" type="button">
+              Enquire on Instagram
+            </button>
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
-const lightboxCounter = document.getElementById("lightbox-counter");
+            <p class="message-status" aria-live="polite"></p>
+          </div>
 
-const closeButton = document.getElementById("lightbox-close");
-const prevButton = document.getElementById("lightbox-prev");
-const nextButton = document.getElementById("lightbox-next");
+        </article>
 
-let currentImages = [];
-let currentImageIndex = 0;
-let lastTrigger = null;
+      </div>
+    </section>
 
+    <!-- PENDANTS -->
+    <section id="pendants" class="catalog">
+      <h3>Pendants</h3>
+      <div class="product-grid"></div>
+    </section>
 
-// Open a product gallery
+    <!-- BRACELETS -->
+    <section id="bracelets" class="catalog">
+      <h3>Bracelets</h3>
+      <div class="product-grid"></div>
+    </section>
 
-function openLightbox(productCard, trigger) {
-  const mainImage = productCard.querySelector(".product-main-image");
-  const additionalImages = productCard.querySelectorAll(".product-gallery img");
+    <!-- EARRINGS -->
+    <section id="earrings" class="catalog">
+      <h3>Earrings &amp; Hoops</h3>
+      <div class="product-grid"></div>
+    </section>
 
-  if (!mainImage) return;
+  </main>
 
-  currentImages = [
-    {
-      src: mainImage.src,
-      alt: mainImage.alt
-    },
-    ...Array.from(additionalImages).map((img) => ({
-      src: img.src,
-      alt: img.alt
-    }))
-  ];
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden>
 
-  currentImageIndex = 0;
-  lastTrigger = trigger;
+    <div class="lightbox-content">
 
-  updateLightbox();
+      <button class="lightbox-close"
+              id="lightbox-close"
+              aria-label="Close gallery">
+        &times;
+      </button>
 
-  lightbox.hidden = false;
-  document.body.classList.add("lightbox-open");
+      <button class="lightbox-arrow lightbox-prev"
+              id="lightbox-prev"
+              aria-label="Previous photograph">
+        &#10094;
+      </button>
 
-  closeButton.focus();
-}
+      <img id="lightbox-image" src="" alt="Jewellery photograph">
 
+      <button class="lightbox-arrow lightbox-next"
+              id="lightbox-next"
+              aria-label="Next photograph">
+        &#10095;
+      </button>
 
-// Update the displayed photograph
+      <div class="lightbox-counter" id="lightbox-counter">
+        1 / 3
+      </div>
 
-function updateLightbox() {
-  if (!currentImages.length) return;
+    </div>
+  </div>
 
-  const image = currentImages[currentImageIndex];
-
-  lightboxImage.src = image.src;
-  lightboxImage.alt = image.alt;
-
-  lightboxCounter.textContent =
-    `${currentImageIndex + 1} / ${currentImages.length}`;
-
-  // Hide arrows if there is only one photograph
-
-  const multipleImages = currentImages.length > 1;
-
-  prevButton.hidden = !multipleImages;
-  nextButton.hidden = !multipleImages;
-}
-
-
-// Next photograph
-
-function nextImage() {
-  if (!currentImages.length) return;
-
-  currentImageIndex =
-    (currentImageIndex + 1) % currentImages.length;
-
-  updateLightbox();
-}
-
-
-// Previous photograph
-
-function previousImage() {
-  if (!currentImages.length) return;
-
-  currentImageIndex =
-    (currentImageIndex - 1 + currentImages.length) %
-    currentImages.length;
-
-  updateLightbox();
-}
-
-
-// Close gallery
-
-function closeLightbox() {
-  if (lightbox.hidden) return;
-
-  lightbox.hidden = true;
-  document.body.classList.remove("lightbox-open");
-
-  currentImages = [];
-
-  if (lastTrigger) {
-    lastTrigger.focus();
-    lastTrigger = null;
-  }
-}
-
-
-// Attach gallery events to each product
-
-document.querySelectorAll(".product-image-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const productCard = button.closest(".product-card");
-
-    if (productCard) {
-      openLightbox(productCard, button);
-    }
-  });
-});
-
-closeButton.addEventListener("click", closeLightbox);
-prevButton.addEventListener("click", previousImage);
-nextButton.addEventListener("click", nextImage);
-
-
-// Close by clicking outside the photograph
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
-});
-
-
-// Keyboard controls
-
-document.addEventListener("keydown", (e) => {
-  if (lightbox.hidden) return;
-
-  if (e.key === "Escape") {
-    closeLightbox();
-  }
-
-  if (e.key === "ArrowRight") {
-    nextImage();
-  }
-
-  if (e.key === "ArrowLeft") {
-    previousImage();
-  }
-});
-
-
-// ========================================
-// INSTAGRAM ENQUIRIES
-// ========================================
-
-const instagramURL = "https://ig.me/m/rar.studiosig";
-
-document.querySelectorAll(".instagram-button").forEach((button) => {
-
-  button.addEventListener("click", async () => {
-
-    const productCard = button.closest(".product-card");
-
-    if (!productCard) return;
-
-    const productName =
-      productCard.querySelector("h4")?.textContent.trim() ||
-      "Jewellery piece";
-
-    const price =
-      productCard.querySelector(".price")?.textContent.trim() ||
-      "";
-
-    const message =
-      `Hello! I'm interested in the ${productName} (${price}). Is it still available?`;
-
-    const status =
-      productCard.querySelector(".message-status");
-
-    // Open the Instagram conversation
-
-    window.open(instagramURL, "_blank", "noopener,noreferrer");
-
-    // Copy the product-specific message
-
-    try {
-      await navigator.clipboard.writeText(message);
-
-      if (status) {
-        status.textContent =
-          "Enquiry copied. Paste it into your Instagram chat.";
-      }
-
-    } catch (error) {
-
-      if (status) {
-        status.textContent =
-          "Instagram opened. Please mention " + productName + " in your message.";
-      }
-
-    }
-
-  });
-
-});
+</body>
+</html>
